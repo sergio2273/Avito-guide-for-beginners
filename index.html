@@ -38,7 +38,6 @@
     overflow: hidden;
   }
 
-  /* SLIDES */
   .slide {
     position: absolute;
     top: 0; left: 0;
@@ -48,7 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 24px 20px;
+    padding: 24px 20px 90px 20px;
     opacity: 0;
     transform: translateX(100%);
     transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
@@ -66,7 +65,7 @@
     transform: translateX(-100%);
   }
 
-  /* SLIDE 1 — INTRO */
+  /* SLIDE 1 */
   .slide-1 {
     background: linear-gradient(145deg, #0A1628 0%, #0D2347 100%);
     text-align: center;
@@ -113,16 +112,16 @@
     cursor: pointer;
     box-shadow: 0 6px 24px rgba(0,170,255,0.45);
     transition: transform 0.15s, box-shadow 0.15s;
+    position: relative;
+    z-index: 10;
   }
 
   .start-btn:active {
     transform: scale(0.96);
-    box-shadow: 0 3px 12px rgba(0,170,255,0.3);
   }
 
   .author-tag {
-    position: absolute;
-    bottom: 90px;
+    margin-top: 24px;
     font-size: 12px;
     color: var(--text-muted);
     display: flex;
@@ -135,12 +134,6 @@
     font-weight: 600;
   }
 
-  /* SLIDE 2 — STATS */
-  .slide-2 {
-    background: linear-gradient(145deg, #0A1628 0%, #0D2347 100%);
-    text-align: center;
-  }
-
   .slide-tag {
     background: rgba(0,170,255,0.12);
     border: 1px solid rgba(0,170,255,0.25);
@@ -149,7 +142,7 @@
     font-size: 12px;
     font-weight: 600;
     color: var(--avito-blue);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-transform: uppercase;
     letter-spacing: 0.8px;
   }
@@ -158,9 +151,11 @@
     font-size: 22px;
     font-weight: 800;
     line-height: 1.3;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
+  /* SLIDE 2 */
   .stats-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -176,6 +171,7 @@
     border: 1px solid rgba(255,255,255,0.06);
     position: relative;
     overflow: hidden;
+    text-align: center;
   }
 
   .stat-card::before {
@@ -185,7 +181,6 @@
     width: 100%;
     height: 3px;
     background: linear-gradient(90deg, #00AAFF, #0066CC);
-    border-radius: 3px 3px 0 0;
   }
 
   .stat-num {
@@ -202,46 +197,39 @@
     line-height: 1.4;
   }
 
-  /* SLIDE 3 — NICHE */
-  .slide-3 {
-    background: linear-gradient(145deg, #0A1628 0%, #0D2347 100%);
-  }
-
+  /* SLIDE 3 */
   .niche-list {
     width: 100%;
     max-width: 360px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: 8px;
   }
 
   .niche-item {
     background: var(--avito-card);
     border-radius: 16px;
-    padding: 16px 18px;
+    padding: 14px 16px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
     border: 1px solid rgba(255,255,255,0.06);
-    transition: transform 0.2s;
   }
 
   .niche-icon {
-    font-size: 26px;
+    font-size: 24px;
     flex-shrink: 0;
   }
 
   .niche-info h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 
   .niche-info p {
     font-size: 12px;
     color: var(--text-muted);
-    line-height: 1.4;
   }
 
   .niche-badge {
@@ -256,24 +244,19 @@
     font-weight: 700;
   }
 
-  /* SLIDE 4 — PROFILE */
-  .slide-4 {
-    background: linear-gradient(145deg, #0A1628 0%, #0D2347 100%);
-  }
-
+  /* SLIDE 4 */
   .steps-list {
     width: 100%;
     max-width: 360px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-top: 8px;
+    gap: 12px;
   }
 
   .step-item {
     background: var(--avito-card);
     border-radius: 16px;
-    padding: 16px 18px;
+    padding: 14px 16px;
     display: flex;
     align-items: flex-start;
     gap: 14px;
@@ -291,33 +274,27 @@
     font-size: 16px;
     font-weight: 800;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(0,170,255,0.35);
   }
 
   .step-text h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .step-text p {
     font-size: 12px;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
-  /* SLIDE 5 — AD */
-  .slide-5 {
-    background: linear-gradient(145deg, #0A1628 0%, #0D2347 100%);
-  }
-
+  /* SLIDE 5 */
   .ad-tips {
     width: 100%;
     max-width: 360px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: 8px;
   }
 
   .ad-tip {
@@ -358,39 +335,32 @@
     line-height: 1.4;
   }
 
-  /* SLIDE 6 — PRICE */
-  .slide-6 {
-    background: linear-gradient(145deg, #0A1628 0%, #0D2347 100%);
-    text-align: center;
-  }
-
+  /* SLIDE 6 */
   .price-cards {
     width: 100%;
     max-width: 360px;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-top: 10px;
   }
 
   .price-card {
     background: var(--avito-card);
     border-radius: 18px;
-    padding: 18px 20px;
+    padding: 16px 18px;
     border: 1px solid rgba(255,255,255,0.06);
     display: flex;
     align-items: center;
     gap: 14px;
-    text-align: left;
   }
 
   .price-icon {
-    font-size: 32px;
+    font-size: 30px;
     flex-shrink: 0;
   }
 
   .price-info h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     margin-bottom: 4px;
   }
@@ -398,7 +368,7 @@
   .price-info p {
     font-size: 12px;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   .highlight {
@@ -406,18 +376,13 @@
     font-weight: 700;
   }
 
-  /* SLIDE 7 — MISTAKES */
-  .slide-7 {
-    background: linear-gradient(145deg, #0A1628 0%, #0D2347 100%);
-  }
-
+  /* SLIDE 7 */
   .mistakes-list {
     width: 100%;
     max-width: 360px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: 8px;
   }
 
   .mistake-item {
@@ -431,15 +396,15 @@
   }
 
   .mistake-cross {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     border-radius: 10px;
     background: rgba(231,76,60,0.15);
     border: 1px solid rgba(231,76,60,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 18px;
     flex-shrink: 0;
   }
 
@@ -455,23 +420,21 @@
     margin-top: 2px;
   }
 
-  /* SLIDE 8 — FINAL */
+  /* SLIDE 8 */
   .slide-8 {
-    background: linear-gradient(145deg, #0A1628 0%, #0D2347 100%);
     text-align: center;
   }
 
   .final-icon {
-    font-size: 64px;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 4px 16px rgba(0,170,255,0.4));
+    font-size: 60px;
+    margin-bottom: 16px;
   }
 
   .slide-8 h2 {
     font-size: 26px;
     font-weight: 900;
     line-height: 1.25;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     background: linear-gradient(135deg, #fff 0%, #8EC5FC 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -483,7 +446,7 @@
     color: var(--text-muted);
     line-height: 1.7;
     max-width: 300px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 
   .checklist {
@@ -492,7 +455,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 28px;
   }
 
   .check-item {
@@ -505,10 +467,7 @@
     font-size: 14px;
     font-weight: 600;
     border: 1px solid rgba(46,204,113,0.15);
-  }
-
-  .check-item span:first-child {
-    font-size: 18px;
+    text-align: left;
   }
 
   /* NAVIGATION */
@@ -516,21 +475,20 @@
     position: fixed;
     bottom: 0; left: 0;
     width: 100%;
-    padding: 14px 20px 24px;
-    background: linear-gradient(0deg, rgba(10,22,40,1) 60%, rgba(10,22,40,0));
+    padding: 14px 20px 28px;
+    background: linear-gradient(0deg, rgba(10,22,40,1) 70%, rgba(10,22,40,0) 100%);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 1000;
   }
 
   .nav-btn {
     width: 52px;
     height: 52px;
     border-radius: 16px;
-    border: none;
-    background: var(--avito-card);
     border: 1px solid rgba(255,255,255,0.1);
+    background: var(--avito-card);
     color: #fff;
     font-size: 22px;
     cursor: pointer;
@@ -539,16 +497,18 @@
     justify-content: center;
     transition: all 0.15s;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
   }
 
   .nav-btn:active {
     transform: scale(0.92);
-    background: rgba(0,170,255,0.15);
+    background: rgba(0,170,255,0.2);
   }
 
   .nav-btn:disabled {
     opacity: 0.25;
     cursor: default;
+    pointer-events: none;
   }
 
   .nav-btn.primary {
@@ -580,7 +540,6 @@
     background: var(--avito-blue);
   }
 
-  /* PROGRESS BAR */
   .progress-bar {
     position: fixed;
     top: 0; left: 0;
@@ -603,12 +562,12 @@
     <div class="logo-badge">Авито</div>
     <h1>Как начать зарабатывать на Авито с нуля</h1>
     <p>Простой гайд от практикующего авитолога. Без воды — только суть.</p>
-    <button class="start-btn" onclick="nextSlide()">Начать →</button>
+    <button class="start-btn" id="startBtn">Начать →</button>
     <div class="author-tag">✦ Гайд для <span>начинающих продавцов</span></div>
   </div>
 
   <!-- SLIDE 2 -->
-  <div class="slide slide-2" data-index="1">
+  <div class="slide" data-index="1">
     <div class="slide-tag">Почему Авито?</div>
     <div class="slide-title">Крупнейший рынок<br>в России 🇷🇺</div>
     <div class="stats-grid">
@@ -632,7 +591,7 @@
   </div>
 
   <!-- SLIDE 3 -->
-  <div class="slide slide-3" data-index="2">
+  <div class="slide" data-index="2">
     <div class="slide-tag">Шаг 1</div>
     <div class="slide-title">Выбери нишу</div>
     <div class="niche-list">
@@ -672,7 +631,7 @@
   </div>
 
   <!-- SLIDE 4 -->
-  <div class="slide slide-4" data-index="3">
+  <div class="slide" data-index="3">
     <div class="slide-tag">Шаг 2</div>
     <div class="slide-title">Оформи профиль</div>
     <div class="steps-list">
@@ -708,7 +667,7 @@
   </div>
 
   <!-- SLIDE 5 -->
-  <div class="slide slide-5" data-index="4">
+  <div class="slide" data-index="4">
     <div class="slide-tag">Шаг 3</div>
     <div class="slide-title">Создай объявление</div>
     <div class="ad-tips">
@@ -744,7 +703,7 @@
   </div>
 
   <!-- SLIDE 6 -->
-  <div class="slide slide-6" data-index="5">
+  <div class="slide" data-index="5">
     <div class="slide-tag">Шаг 4</div>
     <div class="slide-title">Поставь цену правильно</div>
     <div class="price-cards">
@@ -752,7 +711,7 @@
         <div class="price-icon">🔍</div>
         <div class="price-info">
           <h3>Изучи конкурентов</h3>
-          <p>Поищи аналогичный товар на Авито — посмотри <span class="highlight">среднюю цену</span></p>
+          <p>Поищи аналогичный товар — посмотри <span class="highlight">среднюю цену</span></p>
         </div>
       </div>
       <div class="price-card">
@@ -773,7 +732,7 @@
   </div>
 
   <!-- SLIDE 7 -->
-  <div class="slide slide-7" data-index="6">
+  <div class="slide" data-index="6">
     <div class="slide-tag">Важно!</div>
     <div class="slide-title">Ошибки новичков ❌</div>
     <div class="mistakes-list">
@@ -795,7 +754,7 @@
         <div class="mistake-cross">🔕</div>
         <div>
           <div class="mistake-text">Долго не отвечать покупателям</div>
-          <div class="mistake-sub">Покупатель ушёл к конкуренту за 5 минут</div>
+          <div class="mistake-sub">Покупатель уходит к конкуренту за 5 минут</div>
         </div>
       </div>
       <div class="mistake-item">
@@ -814,26 +773,11 @@
     <h2>Ты готов начать!</h2>
     <p>Следуй этому плану — и первые продажи не заставят ждать</p>
     <div class="checklist">
-      <div class="check-item">
-        <span>✅</span>
-        <span>Выбрал нишу</span>
-      </div>
-      <div class="check-item">
-        <span>✅</span>
-        <span>Оформил профиль</span>
-      </div>
-      <div class="check-item">
-        <span>✅</span>
-        <span>Сделал объявление с фото</span>
-      </div>
-      <div class="check-item">
-        <span>✅</span>
-        <span>Поставил правильную цену</span>
-      </div>
-      <div class="check-item">
-        <span>✅</span>
-        <span>Избегаю ошибок новичков</span>
-      </div>
+      <div class="check-item"><span>✅</span><span>Выбрал нишу</span></div>
+      <div class="check-item"><span>✅</span><span>Оформил профиль</span></div>
+      <div class="check-item"><span>✅</span><span>Сделал объявление с фото</span></div>
+      <div class="check-item"><span>✅</span><span>Поставил правильную цену</span></div>
+      <div class="check-item"><span>✅</span><span>Избегаю ошибок новичков</span></div>
     </div>
   </div>
 
@@ -841,15 +785,72 @@
 
 <!-- NAVIGATION -->
 <div class="nav-bar">
-  <button class="nav-btn" id="prevBtn" onclick="prevSlide()" disabled>←</button>
+  <button class="nav-btn" id="prevBtn" disabled>←</button>
   <div class="dots" id="dots"></div>
-  <button class="nav-btn primary" id="nextBtn" onclick="nextSlide()">Далее</button>
+  <button class="nav-btn primary" id="nextBtn">Далее</button>
 </div>
 
 <script>
-  const totalSlides = 8;
-  let current = 0;
+  var current = 0;
+  var total = 8;
+  var isAnimating = false;
 
-  const slides = document.querySelectorAll('.slide');
-  const progressBar = document.getElementById('progressBar');
-  const prevBtn = document.
+  var slides = document.querySelectorAll('.slide');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var dotsContainer = document.getElementById('dots');
+  var progressBar = document.getElementById('progressBar');
+  var startBtn = document.getElementById('startBtn');
+
+  // Создаём точки
+  for (var i = 0; i < total; i++) {
+    var dot = document.createElement('div');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dotsContainer.appendChild(dot);
+  }
+
+  function updateUI() {
+    // Обновляем точки
+    var dots = document.querySelectorAll('.dot');
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].className = 'dot' + (i === current ? ' active' : '');
+    }
+
+    // Прогресс бар
+    progressBar.style.width = ((current + 1) / total * 100) + '%';
+
+    // Кнопки
+    prevBtn.disabled = current === 0;
+
+    if (current === total - 1) {
+      nextBtn.textContent = '✓ Готово';
+      nextBtn.disabled = true;
+    } else {
+      nextBtn.textContent = 'Далее';
+      nextBtn.disabled = false;
+    }
+  }
+
+  function goTo(index) {
+    if (isAnimating) return;
+    if (index < 0 || index >= total) return;
+
+    isAnimating = true;
+
+    var oldSlide = slides[current];
+    var newSlide = slides[index];
+
+    if (index > current) {
+      // Вперёд
+      newSlide.style.transform = 'translateX(100%)';
+      newSlide.style.opacity = '0';
+      newSlide.classList.add('active');
+
+      setTimeout(function() {
+        oldSlide.style.transform = 'translateX(-100%)';
+        oldSlide.style.opacity = '0';
+        newSlide.style.transform = 'translateX(0)';
+        newSlide.style.opacity = '1';
+      }, 20);
+    } else {
+      //
